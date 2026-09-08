@@ -6,6 +6,7 @@ FROM nginx
 RUN apt-get update -y && apt-get install -y git
 
 RUN git clone https://github.com/michaelb/laundrybench temp
+RUN find temp/index.html -type f -exec sed -i 's|lb_chart.js|laundrybench/lb_chart.js|g' {} +
 RUN mkdir -p /usr/share/nginx/html/
 RUN mv temp/*.html /usr/share/nginx/html/
 RUN mv temp/*.js /usr/share/nginx/html/
