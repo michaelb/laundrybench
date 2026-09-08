@@ -10,6 +10,7 @@ RUN find temp/index.html -type f -exec sed -i 's|lb_chart.js|laundrybench/lb_cha
 RUN mkdir -p /usr/share/nginx/html/
 RUN mv temp/*.html /usr/share/nginx/html/
 RUN mv temp/*.js /usr/share/nginx/html/
+RUN cp -r temp/icons /usr/share/nginx/html/
 
 # run nginx in foreground so container doesn't immediately exit.
 EXPOSE 80
