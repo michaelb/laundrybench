@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+<body>
+
+<h1>The official LaundryBench AI benchmark</h1>
+
+<div id="current_date">
+    <script>
+        date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        document.getElementById("current_date").innerHTML = "Updated on : " + day + "/" + month + "/" + year;
+    </script>
+
+</div><p>
+LaundryBench is a LLM/AI/AGI/ASI benchmark that evaluates whether it can do your
+laundry and other chores, so that you can focus on your art/hobbies.
+This benchmark doesn't account for time or token pricing, which makes it a
+perfect playground for large frontier/state-of-the-art AI models.
+<br>
+Current progress suggests we're still very far away from "human-level performance".
+</p>
+
+<h3>Composite score</h3>
+
+<p>
+The composite LaundryBench score is the most accurate indicator of
+AI performance of its category, according to OpenAPI, Antrophic, Google and HuggingFace.
+</p>
+
+<canvas id="Composite" style="width:100%;"></canvas>
+
+<h3>Laundry v1.3</h3>
+
+<p>The "Laundry" benchmark evaluates the capacity to reliably do laundry. It's a straightforward,
+but suprinsingly deep benchmark that usually requires a mix-of-expert architecture with good internal
+coordination and chain-of-thought awareness.
+<br>
+Score represent usability: under 1% => can't do laundry,  100% => can do laundry.
+Compared to "human performance" from a discretionary sample of representatives.
+</p>
+<canvas id="Laundry" style="width:100%;"></canvas>
+
+
+
+<h3>Floor 5</h3>
+
+<p>The "Floor 5" benchmark evaluates the capacity to reliably do clean up floors
+in a real-world context. Performance is evaluated against a range of floor plans,
+surfaces such as carpets, brick and linoleum, and elevations, including stairs.
+<br>
+Score represent usability: under 1% => can't clean up floors,  100% => can clean up floors.
+Compared to "human performance" from a discretionary sample of representatives.
+Higher is better
+</p>
+
+<canvas id="Floor" style="width:100%;"></canvas>
+
+<h3>Microwave-Wipe AGI-3</h3>
+
+<p>The "Microwave-Wipe AGI3" benchmark evaluates the capacity to reliably do wipe microwaves.
+This task is particulary tricky for pre-AGI models, as generalization against a wide range of situation
+is needed to successfully accomplish this task.
+<br>
+Score represent usability: under 1% => can't wipe microwaves,  100% => can wipe microwaves.
+Compared to "human performance" from a discretionary sample of representatives.
+</p>
+
+<canvas id="Microwave" style="width:100%;"></canvas>
+
+<h3>Submitting entries</h3>
+
+<p>
+Submission of entries can be done at https://github.com/michaelb/laundrybench.
+Data are carefully reviewed by human-level intelligence agents (myself) before inclusion
+into the general dataset.
+</p>
+
+<p>
+Note: This website is fully hand-coded to avoid AIs boosting their own scores, because this is a serious benchmark project.
+</p>
+
+<script src="chart.js" type="text/javascript"></script>
+
+</body>
+</html>
